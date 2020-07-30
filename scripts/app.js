@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // card images
+    
     const cardArray = [
         {
             name: 'Cat1',
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             img: '/assets/images/Cat6.jpg'
         }
     ]
-    // randomise the cards at beginning of game.
+    // Randomise the cards at beginning of game.
     cardArray.sort(()=> 0.5 - Math.random());
 
     const grid = document.querySelector('.grid');
@@ -59,13 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var cardsChosenId = [];
     var cardsWon = [];
 
-    // ** Create starting board
-    // we loop over the card array's length.
-    // for each iteration we create an html <img> element and assign it to a variable named 'card'.
-    // the src attribute is then added to each <img> element, along with the value of the src, the relative path to the white-square image.
-    // a second attrubute is added, 'data-id' along with the value at the current index of the loop.
-    // an event listener is then added to listen for a click on the card and if so to call the flipcard function.
-    // append child adds the card to the end of the <div> named 'grid'.
+    //  Create starting board
+    
     function createBoard(){
         for (let i = 0; i < cardArray.length; i++) {
             var card = document.createElement('img');
@@ -77,14 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // * Check selected cards for matches
-    // all img's from the flipcard function are selected and assigned to the cards variable.
-    // the card ids at position 1 and 2 of the cardsChosenId array are assigned to separate variables.
-    // if the two card ids in the cardsChosen array match, an alert is called and then an attribute is set on each card to display a white square.
-    // the two chosen cards are then pushed into the cardsWon array.
-    // if the cards don't match, the attribute is changed again on them to set the image back to the unicorn image.
-    // then, the two arrays are cleared ready for the next flip.
-    // the score is displayed at resultDisplay by taking the value of the length of cardsWon array.
+    // Check selected cards for matches
 
     function checkForMatch() {
         var cards = document.querySelectorAll('img');
@@ -140,12 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-    // * Flip the card
-    // the value at the 'data-id' attribute (the elements index number) is assigned to the cardId variable.
-    // the name property for the cardId element (the elemetns index number) from the cardArray is pushed into the cardsChosen array. 
-    // the index number in cardId is then pushed into the cardsChosenId array.
-    // a src attribute is added to the selected card using the value in the img property from the cardArray at the position contained in cardId. This adds an image to the selected square.
-    // the if statement checks to see if there are 2 cards in its array, if there is the checkForMatch function is fired.
+    // Flip the card
 
     function flipCard() {
         var cardId = this.getAttribute('data-id');
