@@ -11,9 +11,9 @@
 
 > A simple JavaScript game designed to demonstrate an understanding of DOM manipulation and use of an animation library. Created and deployed to celebrate my niece's 6th birthday!
 
-### 🏠 [Homepage](www.address.com)
+### 🏠 [Homepage](https://github.com/ianwhiscombe/match-two-game)
 
-### ✨ [Demo](www.netlify.com)
+### ✨ [Demo](https://match-two-game.netlify.app)
 
 ## Author
 
