@@ -1,0 +1,176 @@
+/* * STANDARD CSS */
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  
+  body {
+    font-size: 1.6rem;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    /* You MUST make sure that links stand out from nomal text though...*/
+  }
+  
+  /*
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+      }
+    */
+  
+  img {
+    /* This means that it can be less than 100% of the width of its parent IF the image is INTRINSICALLY smaller */
+    max-width: 100%;
+  
+    height: auto;
+    /* 'auto' is the initial value for height BUT for images (and other elements which have an intrinic height) that is not the case. To make an image responsive you set one dimension (usually width) to [max-]width: 100%; and the other to 'auto' to ensure it keeps aspect ratio. 'auto' basically tells the browser to decide. */
+    vertical-align: middle;
+    /* minor vertical centering. Works for images IF there is a baseline (i.e. they are displayed inline or inline-block) */
+  }
+  
+  /* Because we us <ul>s for lists that we don't always want bulletted. */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  /* To make actual bulletted lists */
+  ul.typographic {
+    list-style: initial;
+    padding-inline-start: 20px;
+  }
+  
+  /* For 'accessibility text'. If your button only has an image inside it that isn't good for accessibility. Put a span inside there and give it this class and put some descriptive text for what the button does into the span. */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .sr-only-focusable:active,
+  .sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+  
+/* * MY CSS */
+
+body {
+    background-image: url(/assets/images/cat-background.jpg);
+    background-size: contain;
+    font-family: 'Indie Flower', cursive;
+}
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 640px;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        margin: 0 auto;
+        width: 80%;
+        max-width: 492px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 0 auto;
+        width: 80%;
+        max-width: 328px;
+    }
+}
+
+h1 {
+    font-size: 5rem;
+    color: #8b8bfc;   
+}
+.hz-line {
+    border-bottom: 5px solid gray;
+    width: 50%;   
+    opacity: 0.7;
+    display: inline-block;
+}
+.orange-box {
+    border: 2px solid #000000; 
+    background-color: #fbc782;
+    border-radius: 2px;
+    padding: 20px;
+    opacity: 0.9;
+}
+.rules {
+    font-size: 2rem; 
+    margin-bottom: 40px;   
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 640px;
+}
+.shuffle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;   
+}
+img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid grey;
+    border-radius: 2px;
+    margin: 5px;
+    box-shadow: 0 10px 6px -6px #777;
+}
+.score {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+.btn {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ed3330;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+    }
+.btn:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    }
+.rules-list {
+  border: #777 2px solid;
+  border-radius: 2px;
+  background-color: #fff;
+}        

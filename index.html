@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Match Two Kittens</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="/styles/normalize.css"> 
+    <link rel="stylesheet" href="/styles/styles.css">   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Match Two Kittens!</h1>
+        </div>
+    </header>
+    <main class="container" >
+        <div class="rules">
+            <h2>How to play</h2>
+            <div class="rules-list">
+                <ol>
+                    <li>Find matching pairs of kittens</li>
+                    <li>Choose two cards each turn</li>
+                    <li>Find all the kittens to win</li>
+                    <li>Press Shake Kittens to start again</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="grid"></div>
+
+        <div class="shuffle">  
+            <p class="orange-box score">
+                <defn>Score: </defn>
+                <span id="result" aria-live="assertive"></span>
+            </p>          
+            <button class="animate__animated animate__wobble btn" >Shake Kittens</button>
+        </div>
+    </main>
+
+    <footer class="container">
+        <hr class="hz-line" aria-hidden="true"></hr>
+        <p>Ian Whiscombe &copy; 2020</p>
+    </footer> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="/scripts/app.js"></script>  
+</body>
+</html>
